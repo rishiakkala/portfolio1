@@ -217,6 +217,32 @@ export const portfolioData = {
             ],
             technologies: ["Python", "LangChain", "Textual"],
             github: "https://github.com/rishiakkala/Instrukt-AI-Agents",
+        },
+        {
+            title: "NFT TrustScore: Credibility Scoring for NFT Assets",
+            thesis: "On-chain + off-chain analysis for NFT risk and trust assessment",
+            description: "A system that evaluates the trustworthiness of NFT assets by analyzing smart contract behavior, transaction history, creator signals, and marketplace metadata to generate a unified trust score.",
+            features: [
+                "Designed a feature-driven trust scoring pipeline combining on-chain transaction metrics and off-chain metadata",
+                "Engineered signals such as wallet behavior, ownership dispersion, trading velocity, and contract activity",
+                "Implemented scoring logic to flag potential scams, wash trading, and low-credibility assets",
+                "Built a modular architecture to support new risk signals and scoring strategies"
+            ],
+            technologies: ["Python", "Web3 / Blockchain APIs", "Pandas", "Scoring & Heuristic Modeling"],
+            github: "https://github.com/rishiakkala/NFT_TrustScore",
+        },
+        {
+            title: "Hybrid Movie Recommendation System",
+            thesis: "Collaborative filtering + deep learning for personalized recommendations at scale",
+            description: "A hybrid recommendation engine that combines collaborative filtering techniques with deep learning models to deliver accurate and personalized movie recommendations.",
+            features: [
+                "Implemented user–item collaborative filtering using matrix factorization techniques",
+                "Integrated deep learning models to capture non-linear user preference patterns",
+                "Designed a hybrid strategy to mitigate cold-start problems",
+                "Evaluated models using RMSE and MSE on benchmark datasets"
+            ],
+            technologies: ["Python", "Apache Spark / PySpark", "Deep Learning", "MovieLens"],
+            github: "https://github.com/rishiakkala/Hybrid-Movie-Recommendation-System-using-Collaborative-Filtering-and-Deep-Learning",
         }
     ] as Project[],
 
