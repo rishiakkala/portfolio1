@@ -5,7 +5,6 @@ A modern, professional portfolio website for an AI/ML engineer and researcher, b
 ## Features
 
 - 🎨 **Modern Design**: Clean, minimal design with warm copper accents
-- 🏎️ **F1 Car Animation**: Canvas-based hero section with smooth F1 car animation and tire tracks
 - ♿ **Accessible**: Respects `prefers-reduced-motion`, keyboard navigable, high contrast
 - 📱 **Responsive**: Fully responsive across mobile, tablet, and desktop
 - ⚡ **Performance**: Optimized with 30-45 FPS animation cap, lazy loading, and efficient rendering
