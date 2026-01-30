@@ -5,7 +5,6 @@ A modern, professional portfolio website for an AI/ML engineer and researcher, b
 ## Features
 
 - 🎨 **Modern Design**: Clean, minimal design with warm copper accents
-- 🏎️ **F1 Car Animation**: Canvas-based hero section with smooth F1 car animation and tire tracks
 - ♿ **Accessible**: Respects `prefers-reduced-motion`, keyboard navigable, high contrast
 - 📱 **Responsive**: Fully responsive across mobile, tablet, and desktop
 - ⚡ **Performance**: Optimized with 30-45 FPS animation cap, lazy loading, and efficient rendering
@@ -111,25 +110,12 @@ Replace `public/avatar.png` with your own avatar image.
 - Screen reader friendly
 - `prefers-reduced-motion` support
 
-## Deployment
+## 📝 License
 
-### Deploy to Vercel
+This project is open source and available under the [MIT License](LICENSE).
 
-1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
-3. Vercel will automatically detect Next.js and deploy
+## 👨‍💻 Author
 
-### Deploy to Netlify
+**Built by [rishiakkala](https://portfolio1-phi-smoky.vercel.app/)**
 
-1. Push your code to GitHub
-2. Import your repository on [Netlify](https://netlify.com)
-3. Build command: `npm run build`
-4. Publish directory: `.next`
-
-## License
-
-MIT License - feel free to use this template for your own portfolio!
-
-## Author
-
-Built with ❤️ using Next.js and Tailwind CSS
+---
