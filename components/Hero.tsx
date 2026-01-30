@@ -10,11 +10,10 @@ export default function Hero() {
 
     return (
         <section
-            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-primary-bg"
             style={{
                 background: `
-                    radial-gradient(circle at 65% 45%, rgba(192, 106, 62, 0.08), transparent 60%),
-                    linear-gradient(180deg, #F9FAFB 0%, #F3F4F6 100%)
+                    radial-gradient(circle at 65% 45%, rgba(192, 106, 62, 0.08), transparent 60%)
                 `
             }}
         >

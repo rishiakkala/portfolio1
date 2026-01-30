@@ -2,14 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-primary-bg: #F9FAFB;
-  --color-primary-text: #1F2933;
-  --color-secondary-bg: #F1F3F5;
-  --color-secondary-text: #4B5563;
-  --color-accent-copper: #C06A3E;
-  --color-accent-blue: #3B82F6;
-}
+
 
 
 

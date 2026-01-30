@@ -40,6 +40,7 @@ export interface Project {
     technologies: string[];
     link?: string;
     github?: string;
+    systemInsight?: string;
 }
 
 export interface Publication {
@@ -169,7 +170,8 @@ export const portfolioData = {
         {
             title: "Multi-Agent Orchestration Framework (DOTG)",
             thesis: "Coordinating autonomous agents under real-world constraints",
-            description: "A modular framework for orchestrating multiple AI agents capable of task decomposition, tool execution, and recovery-aware coordination in complex workflows.",
+            description: "DOTG is a modular framework designed to orchestrate multiple AI agents as a coherent system rather than isolated scripts. It focuses on task decomposition, agent coordination, and recovery-aware execution in environments where failures, retries, and partial results are expected. The system treats agents as long-running components with clearly defined responsibilities, enabling structured collaboration across tools, memory, and external resources. Emphasis is placed on observability, extensibility, and system-level evaluation rather than single-task performance.",
+            systemInsight: "Designed to study how agent reliability emerges from orchestration, not model complexity.",
             features: [
                 "Designed dynamic task decomposition and agent-to-agent coordination mechanisms",
                 "Implemented tool execution pipelines with failure handling, retries, and fallback logic",
@@ -182,7 +184,8 @@ export const portfolioData = {
         {
             title: "Aircraft Detection Using YOLOv8",
             thesis: "Real-time computer vision system for aircraft detection at scale",
-            description: "An end-to-end object detection pipeline built for high-accuracy aircraft detection across diverse aerial imagery and video streams.",
+            description: "This project implements an end-to-end computer vision pipeline for detecting aircraft in aerial imagery and video streams under operational constraints. The system is designed for real-time inference, balancing accuracy, latency, and robustness across diverse environmental conditions. Beyond model training, the work emphasizes dataset quality, augmentation strategy, and deployment-ready inference workflows. The focus is on building a system that performs reliably outside controlled benchmarks, where data variability and runtime constraints dominate.",
+            systemInsight: "Accuracy mattered, but dataset quality and observability mattered more.",
             features: [
                 "Trained and optimized YOLOv8 models on 10,000+ diverse images and video frames",
                 "Achieved ~92% detection accuracy under varying environmental conditions",
@@ -195,7 +198,8 @@ export const portfolioData = {
         {
             title: "Analysing Income Statements with LLMs",
             thesis: "LLM-powered system for automated financial document understanding",
-            description: "An AI-driven application that extracts, summarizes, and answers natural language queries over financial income statements using large language models.",
+            description: "This system enables automated extraction, summarization, and querying of financial income statements using large language models. It is designed to handle semi-structured documents and translate raw financial data into accessible, queryable insights. The project focuses on building a reliable ingestion and parsing pipeline, followed by retrieval-augmented generation to reduce hallucinations in financial analysis. The interface supports natural language interaction while maintaining traceability to underlying source data.",
+            systemInsight: "LLMs are treated as reasoning layers, not sources of truth.",
             features: [
                 "Built a document ingestion and parsing pipeline for structured financial data",
                 "Implemented LLM-based extraction and summarization using LangChain and Mistral API",
@@ -208,33 +212,36 @@ export const portfolioData = {
         {
             title: "Instrukt AI Agents",
             thesis: "Modular terminal-first AI agent environment",
-            description: "A terminal-driven AI agent environment enabling creation, instruction, and orchestration of modular AI agents.",
+            description: "Instrukt is a terminal-driven environment for creating, configuring, and orchestrating modular AI agents. It is designed around a one-tool-per-agent philosophy, encouraging clear separation of responsibilities and predictable agent behavior. The system supports document-centric workflows, code analysis, and task automation through structured agent runtimes. Containerization is used to ensure isolation and reproducibility, allowing agents to execute tools securely while remaining composable within larger workflows.",
+            systemInsight: "Agents are environments first, interfaces second.",
             features: [
                 "Built a terminal-based AI system for orchestrating agent workflows",
                 "Designed extensible agent interfaces to attach tools and document indexes",
                 "Created an agent runtime that leverages secure containers (like Docker)",
                 "Enabled retrieval and question-answering via indexed data within the environment"
             ],
-            technologies: ["Python", "LangChain", "Textual"],
+            technologies: ["Python", "LangChain", "Docker", "Textual"],
             github: "https://github.com/rishiakkala/Instrukt-AI-Agents",
         },
         {
-            title: "NFT TrustScore: Credibility Scoring for NFT Assets",
-            thesis: "On-chain + off-chain analysis for NFT risk and trust assessment",
-            description: "A system that evaluates the trustworthiness of NFT assets by analyzing smart contract behavior, transaction history, creator signals, and marketplace metadata to generate a unified trust score.",
+            title: "NFT TrustScore",
+            thesis: "On-chain and off-chain credibility scoring for NFT assets",
+            description: "NFT TrustScore is a risk-assessment system that evaluates the credibility of NFT assets by combining on-chain transaction behavior with off-chain metadata and marketplace signals. The goal is to surface trust indicators that are not visible through price alone. The system models wallet behavior, ownership dispersion, trading velocity, and contract activity to generate a unified trust score. It is designed to flag suspicious patterns such as wash trading and low-credibility assets while remaining extensible to new risk signals.",
+            systemInsight: "Trust is modeled as behavior over time, not a single metric.",
             features: [
                 "Designed a feature-driven trust scoring pipeline combining on-chain transaction metrics and off-chain metadata",
                 "Engineered signals such as wallet behavior, ownership dispersion, trading velocity, and contract activity",
                 "Implemented scoring logic to flag potential scams, wash trading, and low-credibility assets",
                 "Built a modular architecture to support new risk signals and scoring strategies"
             ],
-            technologies: ["Python", "Web3 / Blockchain APIs", "Pandas", "Scoring & Heuristic Modeling"],
+            technologies: ["Python", "Web3 / Blockchain APIs", "Pandas", "Scoring Models"],
             github: "https://github.com/rishiakkala/NFT_TrustScore",
         },
         {
             title: "Hybrid Movie Recommendation System",
-            thesis: "Collaborative filtering + deep learning for personalized recommendations at scale",
-            description: "A hybrid recommendation engine that combines collaborative filtering techniques with deep learning models to deliver accurate and personalized movie recommendations.",
+            thesis: "Collaborative filtering and deep learning for personalized recommendations",
+            description: "This project implements a hybrid recommendation engine that combines collaborative filtering with deep learning models to capture both explicit user-item interactions and latent preference patterns. The system addresses common recommendation challenges such as sparsity and cold-start scenarios by blending matrix factorization techniques with neural models. Evaluation is performed using established metrics to balance accuracy and generalization across diverse user profiles.",
+            systemInsight: "Hybrid systems outperform pure models when data is imperfect.",
             features: [
                 "Implemented user–item collaborative filtering using matrix factorization techniques",
                 "Integrated deep learning models to capture non-linear user preference patterns",

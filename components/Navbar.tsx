@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
+
 import { transitions } from "@/utils/motion";
 
 export default function Navbar() {
@@ -221,6 +222,8 @@ export default function Navbar() {
                             >
                                 Contact
                             </button>
+
+
                         </div>
                     </motion.div>
                 )}

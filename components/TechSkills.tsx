@@ -8,7 +8,7 @@ export default function TechSkills() {
     const { design, tools } = portfolioData.skills;
 
     return (
-        <section id="skills" className="py-16 bg-[#F9FAFB] relative overflow-hidden">
+        <section id="skills" className="py-16 bg-primary-bg relative overflow-hidden">
             {/* Background Depth - Neutral Gray Gradient */}
             <div
                 className="absolute inset-0 pointer-events-none opacity-[0.02]"

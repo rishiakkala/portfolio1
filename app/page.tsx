@@ -7,7 +7,6 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Publications from "@/components/Publications";
 import GetInTouch from "@/components/GetInTouch";
-import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -21,7 +20,6 @@ export default function Home() {
             <Projects />
             <Publications />
             <GetInTouch />
-            <Footer />
         </main>
     );
 }

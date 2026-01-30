@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+
 
 const inter = Inter({
     subsets: ["latin"],
@@ -30,9 +34,13 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={inter.variable}>
-            <body className="antialiased">
-                {children}
+        <html lang="en" className={inter.variable} suppressHydrationWarning>
+            <body className="antialiased bg-primary-bg text-primary-text transition-colors duration-300">
+                <main className="flex-grow">
+                    {children}
+                </main>
+                <Footer />
+                <ScrollToTop />
             </body>
         </html>
     );

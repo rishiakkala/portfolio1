@@ -59,7 +59,7 @@ export default function Projects() {
                                 whileHover="hover"
                                 initial="initial"
                                 whileInView="whileInView"
-                                className="group relative bg-[#F9FAFB] border border-black/[0.05] p-8 rounded-2xl transition-all duration-500 hover:border-accent-copper/40 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] flex flex-col h-full cursor-default overflow-hidden"
+                                className="group relative border border-black/[0.05] p-8 rounded-2xl transition-all duration-500 hover:border-accent-copper/40 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] flex flex-col h-full cursor-default overflow-hidden bg-white"
                             >
                                 {/* Subtle Hover Background Shift */}
                                 <motion.div
@@ -67,55 +67,50 @@ export default function Projects() {
                                         initial: { opacity: 0 },
                                         hover: { opacity: 1 }
                                     }}
-                                    className="absolute inset-0 bg-white pointer-events-none transition-opacity duration-500"
+                                    className="absolute inset-0 bg-gradient-to-b from-white to-[#fdf9f6] pointer-events-none transition-opacity duration-500"
                                 />
 
                                 <div className="space-y-6 flex-grow relative z-10">
                                     {/* Title & Thesis */}
                                     <div className="space-y-2">
-                                        <h3 className="text-2xl font-bold text-primary-text font-inter group-hover:text-accent-copper transition-colors duration-300 leading-tight">
+                                        <h3 className="text-2xl font-bold text-gray-900 font-inter group-hover:text-accent-copper transition-colors duration-300 leading-tight">
                                             {project.title}
                                         </h3>
-                                        <p className="text-xs font-bold tracking-[0.15em] text-accent-copper/70 uppercase font-inter">
+                                        <p className="text-xs font-bold tracking-[0.15em] text-accent-copper/80 uppercase font-inter">
                                             {project.thesis}
                                         </p>
                                     </div>
 
-                                    {/* Project Description - Progressive Disclosure */}
+                                    {/* Project Description - High Contrast & Rhythm */}
                                     <motion.p
                                         variants={{
                                             initial: { y: 0 },
                                             hover: { y: -2 }
                                         }}
                                         transition={transitions}
-                                        className="text-sm text-primary-text md:text-secondary-text leading-relaxed font-inter opacity-100 md:opacity-50 transition-opacity duration-300 group-hover:opacity-100"
+                                        className="text-[15px] text-gray-600 leading-[1.65] font-inter transition-colors duration-300"
                                     >
                                         {project.description}
                                     </motion.p>
 
-                                    {/* Structured System Sentences */}
-                                    <motion.div
-                                        variants={{
-                                            initial: { opacity: 1 },
-                                            hover: { opacity: 1 }
-                                        }}
-                                        transition={transitions}
-                                        className="space-y-3 opacity-100 md:opacity-40 transition-opacity duration-300 group-hover:opacity-100"
-                                    >
-                                        <h4 className="text-[10px] font-bold tracking-[0.2em] text-primary-text/30 uppercase font-inter">
-                                            Key Contributions
-                                        </h4>
-                                        {project.features.map((feature, fIndex) => (
-                                            <div key={fIndex} className="flex items-start gap-3">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-accent-copper/40 mt-2 flex-shrink-0" />
-                                                <p className="text-primary-text md:text-secondary-text/80 text-sm font-inter leading-relaxed">
-                                                    {feature}
-                                                </p>
-                                            </div>
-                                        ))}
-                                    </motion.div>
+                                    {/* System Insight - distinct visual separation */}
+                                    {project.systemInsight && (
+                                        <motion.div
+                                            variants={{
+                                                initial: { opacity: 0.8 },
+                                                hover: { opacity: 1 }
+                                            }}
+                                            transition={transitions}
+                                            className="mt-4 pl-3 border-l-2 border-[#E7B08A]"
+                                        >
+                                            <p className="text-xs text-gray-500 italic font-medium leading-relaxed">
+                                                {project.systemInsight}
+                                            </p>
+                                        </motion.div>
+                                    )}
 
-                                    {/* Technologies - Staggered Slide Up */}
+
+                                    {/* Technologies - Clear & Readable (No Opacity) */}
                                     <motion.div
                                         variants={{
                                             hover: {
@@ -124,16 +119,16 @@ export default function Projects() {
                                                 }
                                             }
                                         }}
-                                        className="flex flex-wrap gap-x-3 gap-y-2 pt-2 border-t border-black/[0.03]"
+                                        className="flex flex-wrap gap-x-3 gap-y-2 pt-4 border-t border-gray-100 mt-auto"
                                     >
                                         {project.technologies.map((tech, techIndex) => (
                                             <motion.span
                                                 key={techIndex}
                                                 variants={{
-                                                    initial: { y: 4 },
+                                                    initial: { y: 0 },
                                                     hover: { y: 0 }
                                                 }}
-                                                className="text-[10px] font-bold text-primary-text md:text-secondary-text/60 font-inter uppercase tracking-wider opacity-100 md:opacity-40 transition-opacity duration-300 group-hover:opacity-100"
+                                                className="text-[11px] font-bold text-gray-500 font-inter uppercase tracking-wide"
                                             >
                                                 {tech}{techIndex < project.technologies.length - 1 ? " ·" : ""}
                                             </motion.span>

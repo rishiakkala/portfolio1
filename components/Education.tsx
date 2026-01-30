@@ -29,7 +29,7 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="py-16 bg-[#F9FAFB] relative overflow-hidden"
+            className="py-16 bg-primary-bg relative overflow-hidden"
         >
             {/* Background Texture */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.015] bg-dot-pattern" />

@@ -11,7 +11,7 @@ export default function About() {
     const { github, linkedin, email, resume } = portfolioData.contact;
 
     return (
-        <section id="about" className="py-16 bg-[#F9FAFB] relative overflow-hidden">
+        <section id="about" className="py-16 bg-primary-bg relative overflow-hidden">
             {/* Background Depth - Soft Warm Glow */}
             <div
                 className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -116,7 +116,7 @@ export default function About() {
                                 transition={{ ...transitions, delay: 0.3 }}
                                 className="group transition-all duration-500 hover:-translate-y-2"
                             >
-                                <div className="bg-white/90 backdrop-blur-sm rounded-[24px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-white/20 relative overflow-hidden">
+                                <div className="bg-white/90 backdrop-blur-sm rounded-[24px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-white/20 relative overflow-hidden transition-colors duration-500">
 
                                     {/* Subtle Profile Photo Halo */}
                                     <div className="relative mb-8 flex justify-center">
@@ -215,7 +215,7 @@ export default function About() {
                             <motion.div
                                 variants={variants.sectionReveal}
                                 transition={{ ...transitions, delay: 0.4 }}
-                                className="bg-white/70 backdrop-blur-sm rounded-[20px] p-6 shadow-[0_5px_20px_rgba(0,0,0,0.02)] border border-white/40"
+                                className="bg-white/70 backdrop-blur-sm rounded-[20px] p-6 shadow-[0_5px_20px_rgba(0,0,0,0.02)] border border-white/40 transition-colors duration-500"
                             >
                                 <div className="text-[10px] font-bold tracking-[0.2em] text-secondary-text/40 uppercase mb-6 flex items-center gap-3">
                                     At A Glance

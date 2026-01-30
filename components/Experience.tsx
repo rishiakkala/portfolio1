@@ -23,7 +23,7 @@ export default function Experience() {
     });
 
     return (
-        <section id="experience" className="py-16 bg-[#F9FAFB] relative overflow-hidden">
+        <section id="experience" className="py-16 bg-primary-bg relative overflow-hidden">
             {/* Background Depth - Subtle Warm Neutral */}
             <div
                 className="absolute inset-0 pointer-events-none opacity-[0.02]"
